@@ -1,0 +1,49 @@
+# config options for cAdvisor
+#
+#
+
+# Docker endpoint to connect to
+# Default: unix:///var/run/docker.sock
+CADVISOR_DOCKER_ENDPOINT="unix:///var/run/docker.sock"
+
+# Number of seconds of container history to keep
+# Default: 60 seconds
+CADVISOR_HISTORY_DURATION="60"
+
+# Port to listen on
+# Default: 8080
+# kubernetes expects it on port 4194
+CADVISOR_PORT="4194"
+
+# Samples
+# Number of samples to keep
+# Default: 1024
+CADVISOR_SAMPLES="1024"
+
+# Storage driver
+# Default: memory
+#
+# Available Options:
+#  - memory
+#  - influxdb
+CADVISOR_STORAGE_DRIVER="memory"
+
+# Storage driver host
+# Default: localhost:8086"
+CADVISOR_STORAGE_DRIVER_HOST="localhost:8086"
+
+# Storage driver name
+# Default: cadvisor
+CADVISOR_STORAGE_DRIVER_NAME="cadvisor"
+
+# Storage driver password
+# Default: root
+CADVISOR_STORAGE_DRIVER_PASSWORD="root"
+
+# Storage driver secure connection
+# Default: false
+CADVISOR_STORAGE_DRIVER_SECURE="false"
+
+# Storage driver user
+# Default: root
+CADVISOR_STORAGE_DRIVER_USER="root"
